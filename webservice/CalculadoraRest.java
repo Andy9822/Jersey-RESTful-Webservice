@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 @Path("calculadora")
 public class CalculadoraRest {   
 
-    @Path("/somarInt/{a}/{b}")
+    @Path("/somarInt/{op1}/{op2}")
     @Produces(MediaType.APPLICATION_JSON)
     @GET
     public Calculadora somarInt(@PathParam("op1") int op1,  @PathParam("op2") int op2){
@@ -16,7 +16,7 @@ public class CalculadoraRest {
         return calc;
     }
 
-    @Path("/multiplicarInt/{a}/{b}")
+    @Path("/multiplicarInt/{op1}/{op2}")
     @Produces(MediaType.APPLICATION_JSON)
     @GET
     public Calculadora multiplicarInt(@PathParam("op1") int op1,  @PathParam("op2") int op2){
