@@ -13,6 +13,7 @@ public class CalculadoraRest {
     @GET
     public Calculadora somarInt(@PathParam("op1") int op1,  @PathParam("op2") int op2){
         Calculadora calc = new Calculadora(op1,op2,"+");
+        try { Thread.sleep (3000); } catch (InterruptedException ex) {}
         return calc;
     }
 
